@@ -1,35 +1,43 @@
 # Introdução
 
-[Aqui a equipe deve criar um texto descritivo com a visão geral do problema abordado, apresentando o ambiente e as situações envolvidas no problema.]
+No contexto da indústria de desenvolvimento de jogos digitais, a eficiência e a organização desempenham papeis cruciais no sucesso de uma empresa. Com a crescente no volume de ativos digitais, desde imagens/gráficos, áudios, modelos 3D, scripts, códigos fonte, entre outros, surge a necessidade de uma solução eficaz e acessível para armazenar, organizar e disponibilizar esses recursos.   
+
+ 
+
+Oferecendo uma maneira eficiente de organizar, armazenar e disponibilizar os arquivos, este projeto tem o potencial de transformar a forma como as empresas de desenvolvimento de jogos operam com seus colaboradores. Ao centralizar todos os recursos em um sistema acessível e intuitivo, os desenvolvedores podem economizar tempo precioso que seria gasto procurando por arquivos ou lidando com versões desatualizadas. Além disso, a capacidade de compartilhar facilmente recursos entre diferentes equipes e departamentos promove uma colaboração mais estreita e eficaz. 
+
+ 
+
+Dessa forma, o sistema se torna uma ferramenta indispensável, sendo uma grande aliada da produtividade e do dinamismo dentro de cada setor da empresa. Ao permitir que os usuários acessem rapidamente os recursos necessários para seus projetos, eles podem concentrar seus esforços na criação e na inovação, impulsionando assim a qualidade e o sucesso dos jogos desenvolvidos. 
 
 ## Problema
-[Aqui a equipe deve fornecer uma descrição detalhada do problema a ser resolvido. Não é o momento adequado para abordar questões técnicas relacionadas ao desenvolvimento da aplicação. O objetivo é compreender e comunicar de maneira precisa qual é o desafio ou necessidade que motiva a criação da aplicação.]
+A criação de jogos digitais não é uma tarefa fácil; é necessário tempo, esforço e dedicação por parte de todos os envolvidos no projeto. Dito isso, tal dificuldade se amplia quando o assunto é direcionado aos jogos independentes (indie), pois, em sua maioria, não contam com grandes recursos, como é o caso de empresas de médio e grande porte.  
 
-Este link pode ajudar a equipe a entender mais sobre definição do problema: [Objetivos, Problema de pesquisa e Justificativa.](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
+ 
 
+Sendo assim, a falta de ferramentas simples, práticas e intuitivas, com foco no auxílio e na gestão de projetos de jogos indie prejudica muito a sua criação. Por esse motivo, nossa equipe sente a necessidade de inovar, criando um sistema no qual mesmo uma equipe pequena de desenvolvedores possa trabalhar, gerir e analisar de forma prática e fluida o seu projeto. 
 
 ## Objetivos
 
-[Aqui a equipe deve realizar uma descrição detalhada dos objetivos do trabalho, ressaltando quais as questões principais do problema a serem resolvidas pelo projeto, não é a hora de apresentar requisitos detalhados.]
+O projeto em questão tem como objetivo principal desenvolver um sistema completo e intuitivo para a essa necessidade específica. Este sistema será uma ferramenta essencial para empresas de desenvolvimento de jogos, fornecendo uma plataforma para o gerenciamento eficiente de todos os tipos de ativos digitais utilizados no processo de criação de jogos. 
+
  
-Este link pode ajudar a equipe a entender mais sobre definição dos objetivos: [Objetivos, Problema de pesquisa e Justificativa.](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
+
+Nossa proposta é criar uma solução flexível e personalizável que possa ser adaptada às diversas necessidades e fluxos de trabalho das equipes de desenvolvimento de jogos. Através deste sistema, os desenvolvedores terão fácil e rápido acesso aos recursos necessários, promovendo uma colaboração mais eficaz, reduzindo o tempo gasto na busca por arquivos e garantindo uma gestão eficiente do ciclo de vida dos ativos digitais. 
 
 ## Justificativa
 
-[Aqui a equipe deve descrever a importância ou a motivação para trabalhar com o problema definido. Indique as razões pelas quais a equipe escolheu o problema e definiu os objetivos.
+A existência de um software onde seja possível fazer o gerenciamento de ativos digitais é essencial na indústria de desenvolvimento de jogos, onde a criação de experiências únicas depende de uma boa administração de seus recursos como texturas, animações, modelagens dentre outros. A principal justificativa para o desenvolvimento de tal software consiste na importância de organizar, armazenar e otimizar esses ativos, com o objetivo de garantir uma base sólida durante o desenvolvimento dos jogos.  
 
-Devem ser apresentados dados de fontes relevantes e confiáveis sobre o problema, inserindo-o como alvo de estudo. Sugere-se que a equipe utilize questionários, entrevistas e dados estatísticos, que devem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pela equipe.]
+  
 
-Este link pode ajudar a equipe a formular a justificativa: [Como montar a justificativa.](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Essa necessidade é também é reforçada pelos autores Ralph Keeling e Renato Henrique no livro "Gestão de Projetos", onde é dito que a gestão eficaz e uma estrutura administrativa própria são essenciais para o progresso e sucesso de qualquer empreendimento. Na indústria de desenvolvimento de jogos, a gestão eficiente de ativos digitais é parte integrante desse processo. 
+
+  
+
+Um software para a gestão de ativos digitais irá oferecer o armazenamento seguro, a organização intuitiva e o acesso fácil aos ativos, assim garantindo uma estrutura administrativa mais centralizada onde toda a equipe possa interagir de forma colaborativa e eficiente. 
 
 ## Público-Alvo
 
-[Aqui é necessário descrever os atores envolvidos no problema, destacando os diferentes perfis de usuários. O propósito é apresentar as características, necessidades, conhecimentos prévios e experiência com a tecnologia do público-alvo.
-
-Sugere-se que a equipe utilize questionários e/ou entrevistas a fim de conhecer os atores que compõem o público alvo.]
-
-Os links abaixo podem ajudar a equipe a conhecer um pouco mais sobre o público-alvo. 
-
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
+Esta aplicação é voltada para profissionais e empresas da indústria de desenvolvimento de jogos, com um foco especial em jogos independentes (indie). Inclui desenvolvedores, gerentes de projeto, designers, artistas e outros membros da equipe de desenvolvimento, todos buscando melhorar tanto a gestão de seus projetos quanto a comunicação interna. A solução proposta oferece uma plataforma intuitiva para coordenar atividades, promover colaboração e aumentar a produtividade. Além disso, beneficia freelancers e estudantes interessados no desenvolvimento de jogos. 
 
