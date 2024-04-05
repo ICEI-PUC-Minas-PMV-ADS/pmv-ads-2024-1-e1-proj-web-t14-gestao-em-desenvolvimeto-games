@@ -10,12 +10,13 @@ O objetivo do projeto é a criação de uma ferramenta para gestão de ativos di
 
 ## Integrantes
 
-* Darem Adson Rocha 
+* Darem Adson Rocha
+* Débora Fernanda Nascimento de Arruda
 * Henrique Chamone Oselieri 
 * Rafael Batista Mariano 
 * Roger da Silva Marques 
 * Vinicios da Costa Oliveira 
-* Nome completo do aluno 6
+
 
 ## Orientador
 
