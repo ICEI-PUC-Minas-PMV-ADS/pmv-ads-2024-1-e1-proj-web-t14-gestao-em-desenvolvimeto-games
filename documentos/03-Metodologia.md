@@ -14,7 +14,7 @@ A metodologia ágil escolhida para o desenvolvimento deste projeto foi o SCRUM, 
 A equipe utiliza o Scrum como base para definição do processo de desenvolvimento.
 
 - Scrum Master: Vinicios Oliveira.
-- Product Owner: Roger Maarques.
+- Product Owner: Roger Marques.
 - Equipe de Desenvolvimento: Darem Rocha, Débora Arruda, Henrique Chamone, Rafael Mariano, Roger Marques, vinicios Oliveira.
 - Equipe de Design: Vinicios Oliveira.
 
@@ -51,7 +51,15 @@ Para nos organizarmos em relação as terefas que devem ser entregues, optamos p
   
 ### Ferramentas
 
-[Descreva aqui as ferramentas empregadas no projeto e os ambiente de trabalho utilizados pela  equipe para desenvolvê-lo. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).]
+Para a realização do projeto, usaremos as seguintes ferramentas:
+
+<ul>
+  <li>Visual Studio Code</li>
+  <li>Microsoft Teams</li>
+  <li>Trello</li>
+</ul>
+
+Escolhemos o Visual Studio Code como ferramenta de edição de código pois ele oferece um amplo suporte a diversas linguagens de programação e tecnologias. Utilizaremos o Microsoft Teams para nos comunicarmos durante o desenvolvimento dos requisitos e para alinhamentos.E por fim, usaremos o Trello para fazer a gestão dos requisitos e acompanhar o andamento do projeto.
 
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
 
