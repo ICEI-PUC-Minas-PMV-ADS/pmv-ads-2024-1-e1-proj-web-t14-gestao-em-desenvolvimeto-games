@@ -66,9 +66,9 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 | AMBIENTE                            | PLATAFORMA                         | LINK DE ACESSO                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
 | Repositório de código fonte         | GitHub                             | http://....                            |
-| Documentos do projeto               | GitHub                             | http://....                            |
-| Projeto de Interface                | Figma                              | http://....                            |
-| Gerenciamento do Projeto            | GitHub Projects                    | http://....                            |
+| Documentos do projeto               | GitHub                             | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-gestao-em-desenvolvimeto-games/tree/main                           |
+| Projeto de Interface                | Figma                              | https://www.figma.com/file/ZqCWB0BLC50qDfUxm4xQ1u/Patch--Gestor-de-Projetos?type=design&node-id=16%3A17&mode=design&t=N76KRc1t1ABXLWIb-1                           |
+| Gerenciamento do Projeto            | Trello                   | https://trello.com/invite/b/IFlZEypU/ATTI23fa4aff05cca79df5d33ca4d507c2b80D1209D2/patch-gestao-de-ativos-digitais                            |
 | Hospedagem                          | GitHub Pages                       | http://....                            |
 
 
