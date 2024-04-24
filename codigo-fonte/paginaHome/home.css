@@ -1,3 +1,5 @@
+/* HEADER */
+
 .home-header {
     display: flex;
     justify-content: space-between;
@@ -19,30 +21,56 @@
 }
 
 .add-btn {
-    background-color: #445FEA;
-    font-weight: 700;
-    border-radius: 4px;
     width: 140px;
     height: 42px;
-    color: #FFF;
-    transition: all 0.3s;
-}
-
-.add-btn:hover {
-    background-color: #5671f8;
-}
-
-.add-btn:active {
-    background-color: #2540c5;
 }
 
 .user-icon {
     width: 40px;
     height: 40px;
     cursor: pointer;
+    transition: all 0.2s;
 
 }
 
 .user-icon:hover {
     filter: drop-shadow(3px 3px 6px black);
 }
+
+/* CATEGORIES */
+
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.categories-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.categories-card {
+    background-color: #FFF;
+    padding: 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.categories-card:hover {
+    scale: 1.1;
+    font-weight: 700;
+}
+
+.add-category-btn {
+    width: 140px;
+    height: 42px;
+}
+
