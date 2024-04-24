@@ -1,0 +1,48 @@
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 20px 0 20px;
+}
+
+.logo {
+    width: 250px;
+    height: 90px;
+    cursor: pointer;
+}
+
+.home-header > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.add-btn {
+    background-color: #445FEA;
+    font-weight: 700;
+    border-radius: 4px;
+    width: 140px;
+    height: 42px;
+    color: #FFF;
+    transition: all 0.3s;
+}
+
+.add-btn:hover {
+    background-color: #5671f8;
+}
+
+.add-btn:active {
+    background-color: #2540c5;
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+}
+
+.user-icon:hover {
+    filter: drop-shadow(3px 3px 6px black);
+}
