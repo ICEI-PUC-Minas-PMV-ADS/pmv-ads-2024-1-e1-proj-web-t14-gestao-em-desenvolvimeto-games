@@ -74,3 +74,51 @@
     height: 42px;
 }
 
+/* ACTIVES LIST */
+
+.actives-list-container {
+    margin-top: 40px;
+}
+
+.actives-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+}
+
+.active-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 2px;
+    width: 250px;
+    height: 400px;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.active-card:hover  {
+    img {
+        transform: scale(1.1);
+    }
+}
+
+.active-card > img {
+    width: 100%;
+    border-radius: 4px;
+    transition: 0.5s all ease-in-out;
+}
+
+.active-card > span {
+    background-color: #8DFD89;
+    color: #0B5200;
+    font-weight: 700;
+    padding: 6px;
+    border-radius: 4px;
+}
+
