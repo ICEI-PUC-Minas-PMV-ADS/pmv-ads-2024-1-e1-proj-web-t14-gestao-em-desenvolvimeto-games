@@ -1,0 +1,38 @@
+.details-header {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 250px;
+    height: 90px;
+    cursor: pointer;
+}
+
+.details-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: start;
+    padding: 0 40px;
+    margin-top: 30px;
+}
+
+.active-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 440px;;
+}
+
+.active-img {
+    width: 100%;
+    height: 260px;
+    border-radius: 4px;
+}
+
+.active-title {
+    font-weight: bolder;
+}
+
