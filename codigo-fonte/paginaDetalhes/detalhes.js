@@ -1,3 +1,9 @@
+/* Função para retornar para a pagina inicial */
+
+function goBack() {
+    window.location.href = "../paginaHome/home.html"
+}
+
 /* Mapeamento dos detalhes do ativo digital */
 
 const active = {
