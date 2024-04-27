@@ -36,6 +36,10 @@
     font-weight: bolder;
 }
 
+.details-container > aside {
+    max-width: 350px;
+}
+
 .status-list {
     list-style: none;
     display: flex;
@@ -76,3 +80,40 @@
     scale: 1.2;
 }
 
+.comment-container {
+    margin-top: 30px;
+}
+
+.comment-input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comment-input {
+    border: none;
+    width: 340px;
+    height: 100px;
+    padding: 10px;
+    margin-top: 10px;
+    resize: none;
+}
+
+.comment-input-container > button {
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.comment-list {
+    list-style: none;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comment-list > li > p {
+    font-size: 14px;
+    margin-top: 6px;
+    line-break: anywhere;
+}

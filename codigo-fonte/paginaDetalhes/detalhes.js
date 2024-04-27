@@ -28,7 +28,7 @@ activeSection.appendChild(activeImg)
 activeSection.appendChild(activeTitle)
 activeSection.appendChild(activeDesc)
 
-/* Seleção de status */
+/* Seleção de status*/
 
 function selectStatus() {
     const element = event.target
@@ -43,3 +43,30 @@ function selectStatus() {
 
     element.classList.add('selected')
 }
+
+/* Mapeamento dos comentários do ativo digital */
+
+const comments = [
+    {id: '1', author: 'Roger Marques', message: 'asndsuiabdsayudasudbasudvasjihdbvasyhdvasydvasyvgsdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffgdfgdfgdfgdfdvasda'},
+    {id: '1', author: 'Roger Marques', message: 'asndsuiabdsayudasudbasudvasjihdbvasyhdvasydvasydvasda'},
+    {id: '1', author: 'Roger Marques', message: 'asndsuiabdsayudasudbasudvasjihdbvasyhdvasydvasydvasda'}
+]
+
+const commentList = document.querySelector('.comment-list')
+
+comments.forEach((comment) => {
+    const li = document.createElement('li')
+    
+    const author = document.createElement('h3')
+    author.innerHTML = comment.author
+
+    const message = document.createElement('p')
+    message.innerHTML = comment.message
+
+    li.appendChild(author)
+    li.appendChild(message)
+
+    commentList.appendChild(li)
+})
+
+
