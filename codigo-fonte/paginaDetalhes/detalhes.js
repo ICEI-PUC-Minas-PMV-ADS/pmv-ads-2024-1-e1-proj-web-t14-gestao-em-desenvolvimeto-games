@@ -28,6 +28,18 @@ activeSection.appendChild(activeImg)
 activeSection.appendChild(activeTitle)
 activeSection.appendChild(activeDesc)
 
+/* Seleção de status */
 
+function selectStatus() {
+    const element = event.target
 
+    const statusList = document.getElementsByClassName('status-container')
+    const someStatusIsSelected = [...statusList].some((stat) => stat.className.includes("selected"))
 
+    if(someStatusIsSelected) {
+        const selectedStatus = document.querySelector('.selected')
+        selectedStatus.classList.remove('selected')
+    } 
+
+    element.classList.add('selected')
+}

@@ -36,3 +36,43 @@
     font-weight: bolder;
 }
 
+.status-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.status-container {
+    border-radius: 4px;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.status-container:hover {
+    font-weight: 900;
+    background-color: default;
+}
+
+.to-do{
+    background-color: #FF6666;
+    color: #680909
+}
+
+.doing {
+    background-color: #FFFF66;
+    color: #71730A
+}
+
+.done {
+    background-color: #8DFD89;
+    color: #0B5200
+}
+
+.selected {
+    scale: 1.2;
+}
+
