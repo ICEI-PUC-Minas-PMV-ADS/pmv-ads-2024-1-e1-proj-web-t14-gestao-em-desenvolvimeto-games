@@ -16,6 +16,7 @@ categories.forEach((category) => {
 
 const actives = [
     {
+        id: '1',
         title: 'Pacote Low poly Nature 1',
         description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
         molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
@@ -24,6 +25,7 @@ const actives = [
         img: 'https://img.itch.zone/aW1hZ2UvMTE0NTkzLzUzMDgwNy5qcGc=/original/%2F0ce0N.jpg',
     },
     {
+        id: '2',
         title: 'Pacote Low poly Nature 1',
         description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
         molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
@@ -32,6 +34,7 @@ const actives = [
         img: 'https://img.itch.zone/aW1hZ2UvMTE0NTkzLzUzMDgwNy5qcGc=/original/%2F0ce0N.jpg',
     },
     {
+        id: '3',
         title: 'Pacote Low poly Nature 1',
         description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
         molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
@@ -40,6 +43,7 @@ const actives = [
         img: 'https://img.itch.zone/aW1hZ2UvMTE0NTkzLzUzMDgwNy5qcGc=/original/%2F0ce0N.jpg',
     },
     {
+        id: '4',
         title: 'Pacote Low poly Nature 1',
         description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
         molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
@@ -48,6 +52,7 @@ const actives = [
         img: 'https://img.itch.zone/aW1hZ2UvMTE0NTkzLzUzMDgwNy5qcGc=/original/%2F0ce0N.jpg',
     },
     {
+        id: '6',
         title: 'Pacote Low poly Nature 1',
         description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
         molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
@@ -56,6 +61,7 @@ const actives = [
         img: 'https://img.itch.zone/aW1hZ2UvMTE0NTkzLzUzMDgwNy5qcGc=/original/%2F0ce0N.jpg',
     },
     {
+        id: '7',
         title: 'Pacote Low poly Nature 1',
         description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
         molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
@@ -64,6 +70,7 @@ const actives = [
         img: 'https://img.itch.zone/aW1hZ2UvMTE0NTkzLzUzMDgwNy5qcGc=/original/%2F0ce0N.jpg',
     },
     {
+        id: '8',
         title: 'Pacote Low poly Nature 1',
         description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
         molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
@@ -72,6 +79,7 @@ const actives = [
         img: 'https://img.itch.zone/aW1hZ2UvMTE0NTkzLzUzMDgwNy5qcGc=/original/%2F0ce0N.jpg',
     },
     {
+        id: '9',
         title: 'Pacote Low poly Nature 1',
         description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
         molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
@@ -104,9 +112,16 @@ actives.forEach((active) => {
     li.appendChild(description)
     li.appendChild(status)
 
+    function goToDetails(id) {
+        window.location.href = `../paginaDetalhes/detalhes.html?id=${id}`
+    }
+
+    li.addEventListener('click',() => goToDetails(active.id))
+
     activesList.appendChild(li)
 })
 
 function goToProfile() {
     window.location.href = "../paginaPerfil/perfil.html"
 }
+

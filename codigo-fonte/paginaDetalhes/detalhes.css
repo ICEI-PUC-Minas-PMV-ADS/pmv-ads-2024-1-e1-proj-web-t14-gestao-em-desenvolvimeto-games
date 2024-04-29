@@ -1,0 +1,140 @@
+.details-header {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 250px;
+    height: 90px;
+    cursor: pointer;
+}
+
+.back-btn {
+    background-color: transparent;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #1E1E1E;
+    font-size: 16px;
+    font-weight: 800;
+    margin: 10px 0 0 40px;
+}
+
+.back-btn:hover {
+    background-color: transparent;
+    scale: 1.1;
+}
+
+.back-btn > img {
+    width: 20px;
+}
+
+.details-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: start;
+    padding: 0 40px;
+    margin-top: 30px;
+}
+
+.active-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 440px;;
+}
+
+.active-img {
+    width: 100%;
+    height: 260px;
+    border-radius: 4px;
+}
+
+.active-title {
+    font-weight: bolder;
+}
+
+.details-container > aside {
+    max-width: 350px;
+}
+
+.status-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.status-container {
+    border-radius: 4px;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.status-container:hover {
+    font-weight: 900;
+    background-color: default;
+}
+
+.to-do{
+    background-color: #FF6666;
+    color: #680909
+}
+
+.doing {
+    background-color: #FFFF66;
+    color: #71730A
+}
+
+.done {
+    background-color: #8DFD89;
+    color: #0B5200
+}
+
+.selected {
+    scale: 1.2;
+}
+
+.comment-container {
+    margin-top: 30px;
+}
+
+.comment-input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comment-input {
+    border: none;
+    width: 340px;
+    height: 100px;
+    padding: 10px;
+    margin-top: 10px;
+    resize: none;
+}
+
+.comment-input-container > button {
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.comment-list {
+    list-style: none;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comment-list > li > p {
+    font-size: 14px;
+    margin-top: 6px;
+    line-break: anywhere;
+}
