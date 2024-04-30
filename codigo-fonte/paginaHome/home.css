@@ -114,11 +114,17 @@
     transition: 0.5s all ease-in-out;
 }
 
+.active-card > p {
+    overflow-y: scroll;
+    text-overflow: ellipsis;
+}
+
 .active-card > span {
     background-color: #8DFD89;
     color: #0B5200;
     font-weight: 700;
     padding: 6px;
     border-radius: 4px;
+    margin-top: 5px;
 }
 
