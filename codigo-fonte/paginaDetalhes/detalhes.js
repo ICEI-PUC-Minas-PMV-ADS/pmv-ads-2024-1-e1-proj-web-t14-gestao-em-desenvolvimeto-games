@@ -34,7 +34,7 @@ switch (active.status) {
     case 'A Fazer':
         const toDoStatus = document.querySelector('.to-do')
         toDoStatus.classList.add('selected')
-        break;
+    break;
 
     case 'Em Andamento':
         const inProgressStatus = document.querySelector('.doing')

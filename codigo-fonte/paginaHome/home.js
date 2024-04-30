@@ -34,6 +34,23 @@ actives.forEach((active) => {
     const status = document.createElement('span')
     status.innerHTML = active.status
 
+    switch (active.status) {
+        case 'A Fazer':
+            status.classList.add('to-do')
+        break;
+    
+        case 'Em Andamento':
+            status.classList.add('doing')
+        break;
+    
+        case 'Finalizado':
+            status.classList.add('done')
+        break;
+    
+        default:
+            break;
+    }
+
     li.appendChild(img)
     li.appendChild(title)
     li.appendChild(description)

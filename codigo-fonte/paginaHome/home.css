@@ -120,8 +120,6 @@
 }
 
 .active-card > span {
-    background-color: #8DFD89;
-    color: #0B5200;
     font-weight: 700;
     padding: 6px;
     border-radius: 4px;

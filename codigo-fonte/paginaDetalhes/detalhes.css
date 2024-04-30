@@ -82,21 +82,6 @@
     background-color: default;
 }
 
-.to-do{
-    background-color: #FF6666;
-    color: #680909
-}
-
-.doing {
-    background-color: #FFFF66;
-    color: #71730A
-}
-
-.done {
-    background-color: #8DFD89;
-    color: #0B5200
-}
-
 .selected {
     scale: 1.2;
 }
