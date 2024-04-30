@@ -125,3 +125,7 @@ function goToProfile() {
     window.location.href = "../paginaPerfil/perfil.html"
 }
 
+function goToAddActivePage() {
+    window.location.href = "../paginaAdicionarAtivos/adicionarAtivos.html"
+}
+
