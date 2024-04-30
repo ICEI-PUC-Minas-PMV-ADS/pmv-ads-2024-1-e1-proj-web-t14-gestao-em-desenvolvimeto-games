@@ -1,3 +1,11 @@
+/* Função responsável pela geração de um id aleatório */
+
+function generateId() {
+    const id = "id" + Math.random().toString(16).slice(2)
+    
+    return id
+}
+
 /* Função responsável pela adição do ativo no local storage */
 
 function addActive()  {
@@ -8,7 +16,14 @@ function addActive()  {
     const img = document.querySelector("#img-url").value
     const category = document.querySelector("#category").value
 
-    const active = {title,desc,img,category, status: 'A fazer'}
+    const active = {
+        id: generateId(),
+        title,
+        desc,
+        img,
+        category, 
+        status: 'A fazer'
+    }
 
     const isSomeFieldEmpty = [title, desc, img, category].some((field) => field.length === 0)
 
