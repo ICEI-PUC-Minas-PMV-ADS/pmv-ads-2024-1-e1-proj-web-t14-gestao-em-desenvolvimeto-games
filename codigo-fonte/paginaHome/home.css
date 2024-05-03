@@ -37,6 +37,12 @@
     filter: drop-shadow(3px 3px 6px black);
 }
 
+@media only screen and (max-width: 484px){
+    .home-header {
+        justify-content: center;
+    }
+}
+
 /* CATEGORIES */
 
 .categories-container {
