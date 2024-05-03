@@ -22,7 +22,7 @@ function addActive()  {
         desc,
         img,
         category, 
-        status: 'A fazer'
+        status: 'A Fazer'
     }
 
     const isSomeFieldEmpty = [title, desc, img, category].some((field) => field.length === 0)
