@@ -14,112 +14,62 @@ categories.forEach((category) => {
 
 /* Mapeamento dos ativos digitais */
 
-const actives = [
-    {
-        id: '1',
-        title: 'Pacote Low poly Nature 1',
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-        numquam blanditiis harum`,
-        status: 'Finalizado',
-        img: 'https://img.itch.zone/aW1hZ2UvMTE0NTkzLzUzMDgwNy5qcGc=/original/%2F0ce0N.jpg',
-    },
-    {
-        id: '2',
-        title: 'Pacote Low poly Nature 1',
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-        numquam blanditiis harum`,
-        status: 'Finalizado',
-        img: 'https://img.itch.zone/aW1hZ2UvMTE0NTkzLzUzMDgwNy5qcGc=/original/%2F0ce0N.jpg',
-    },
-    {
-        id: '3',
-        title: 'Pacote Low poly Nature 1',
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-        numquam blanditiis harum`,
-        status: 'Finalizado',
-        img: 'https://img.itch.zone/aW1hZ2UvMTE0NTkzLzUzMDgwNy5qcGc=/original/%2F0ce0N.jpg',
-    },
-    {
-        id: '4',
-        title: 'Pacote Low poly Nature 1',
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-        numquam blanditiis harum`,
-        status: 'Finalizado',
-        img: 'https://img.itch.zone/aW1hZ2UvMTE0NTkzLzUzMDgwNy5qcGc=/original/%2F0ce0N.jpg',
-    },
-    {
-        id: '6',
-        title: 'Pacote Low poly Nature 1',
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-        numquam blanditiis harum`,
-        status: 'Finalizado',
-        img: 'https://img.itch.zone/aW1hZ2UvMTE0NTkzLzUzMDgwNy5qcGc=/original/%2F0ce0N.jpg',
-    },
-    {
-        id: '7',
-        title: 'Pacote Low poly Nature 1',
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-        numquam blanditiis harum`,
-        status: 'Finalizado',
-        img: 'https://img.itch.zone/aW1hZ2UvMTE0NTkzLzUzMDgwNy5qcGc=/original/%2F0ce0N.jpg',
-    },
-    {
-        id: '8',
-        title: 'Pacote Low poly Nature 1',
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-        numquam blanditiis harum`,
-        status: 'Finalizado',
-        img: 'https://img.itch.zone/aW1hZ2UvMTE0NTkzLzUzMDgwNy5qcGc=/original/%2F0ce0N.jpg',
-    },
-    {
-        id: '9',
-        title: 'Pacote Low poly Nature 1',
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-        numquam blanditiis harum`,
-        status: 'Finalizado',
-        img: 'https://img.itch.zone/aW1hZ2UvMTE0NTkzLzUzMDgwNy5qcGc=/original/%2F0ce0N.jpg',
-    }
-]
+const actives = JSON.parse(localStorage.getItem('active-list'))
 
 const activesList = document.querySelector('.actives-list')
 
-actives.forEach((active) => {
-    const li = document.createElement('li')
-    li.className = 'active-card'
+if(!actives || actives.length === 0) {
+    const emptyListContainer = document.querySelector('.empyt-list-container')
 
-    const img = document.createElement('img')
-    img.src = active.img
-
-    const title = document.createElement('h3')
-    title.innerHTML = active.title
-
-    const description = document.createElement('p')
-    description.innerHTML = active.description
-
-    const status = document.createElement('span')
-    status.innerHTML = active.status
-
-    li.appendChild(img)
-    li.appendChild(title)
-    li.appendChild(description)
-    li.appendChild(status)
-
-    function goToDetails(id) {
-        window.location.href = `../paginaDetalhes/detalhes.html?id=${id}`
-    }
-
-    li.addEventListener('click',() => goToDetails(active.id))
-
-    activesList.appendChild(li)
-})
+    emptyListContainer.classList.add('visible')
+} else {
+    actives.forEach((active) => {
+        const li = document.createElement('li')
+        li.className = 'active-card'
+    
+        const img = document.createElement('img')
+        img.src = active.img
+    
+        const title = document.createElement('h3')
+        title.innerHTML = active.title
+    
+        const description = document.createElement('p')
+        description.innerHTML = active.desc
+    
+        const status = document.createElement('span')
+        status.innerHTML = active.status
+    
+        switch (active.status) {
+            case 'A Fazer':
+                status.classList.add('to-do')
+            break;
+        
+            case 'Em Andamento':
+                status.classList.add('doing')
+            break;
+        
+            case 'Finalizado':
+                status.classList.add('done')
+            break;
+        
+            default:
+                break;
+        }
+    
+        li.appendChild(img)
+        li.appendChild(title)
+        li.appendChild(description)
+        li.appendChild(status)
+    
+        function goToDetails(id) {
+            window.location.href = `../paginaDetalhes/detalhes.html?id=${id}`
+        }
+    
+        li.addEventListener('click',() => goToDetails(active.id))
+    
+        activesList.appendChild(li)
+    })
+}
 
 function goToProfile() {
     window.location.href = "../paginaPerfil/perfil.html"

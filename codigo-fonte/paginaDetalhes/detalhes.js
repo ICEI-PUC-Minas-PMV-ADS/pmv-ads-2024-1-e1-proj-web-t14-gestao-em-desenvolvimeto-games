@@ -6,15 +6,11 @@ function goBack() {
 
 /* Mapeamento dos detalhes do ativo digital */
 
-const active = {
-    id: '1',
-    title: 'Pacote Low poly Nature 1',
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-    numquam blanditiis harum`,
-    status: 'Finalizado',
-    img: 'https://img.itch.zone/aW1hZ2UvMTE0NTkzLzUzMDgwNy5qcGc=/original/%2F0ce0N.jpg',
-}
+let params = (new URL(document.location)).searchParams;
+let id = params.get("id");
+
+const active = JSON.parse(localStorage.getItem('active-list'))
+    .filter((active) => active.id === id)[0]
 
 const activeSection = document.querySelector('.active-details')
 
@@ -27,14 +23,47 @@ activeTitle.innerHTML = active.title
 activeTitle.className = 'active-title'
 
 const activeDesc = document.createElement('p')
-activeDesc.innerHTML = active.description
+activeDesc.innerHTML = active.desc
 activeDesc.className = 'active-desc'
 
 activeSection.appendChild(activeImg)
 activeSection.appendChild(activeTitle)
 activeSection.appendChild(activeDesc)
 
+switch (active.status) {
+    case 'A Fazer':
+        const toDoStatus = document.querySelector('.to-do')
+        toDoStatus.classList.add('selected')
+    break;
+
+    case 'Em Andamento':
+        const inProgressStatus = document.querySelector('.doing')
+        inProgressStatus.classList.add('selected')
+    break;
+
+    case 'Finalizado':
+        const doneStatus = document.querySelector('.done')
+        doneStatus.classList.add('selected')
+    break;
+
+    default:
+        break;
+}
+
 /* Seleção de status*/
+
+function changeActiveStatus(status) {
+    const activeList = JSON.parse(localStorage.getItem('active-list'))
+        .map((active) => {
+            if(active.id === id)  {
+                return {...active, status }
+            }
+
+            return active
+        })
+
+    localStorage.setItem('active-list', JSON.stringify(activeList))
+}
 
 function selectStatus() {
     const element = event.target
@@ -45,9 +74,11 @@ function selectStatus() {
     if(someStatusIsSelected) {
         const selectedStatus = document.querySelector('.selected')
         selectedStatus.classList.remove('selected')
-    } 
+    }
 
     element.classList.add('selected')
+
+    changeActiveStatus(element.innerHTML)    
 }
 
 /* Mapeamento dos comentários do ativo digital */

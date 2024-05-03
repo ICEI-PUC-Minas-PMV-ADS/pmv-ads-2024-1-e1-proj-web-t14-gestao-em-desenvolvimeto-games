@@ -7,6 +7,7 @@
 
 body {
     background-color: #EEF4F7;
+    margin-bottom: 30px;
 }
 
 button {
@@ -29,4 +30,19 @@ button:active {
 
 h1,h2,h3 {
     color: #101820
+}
+
+.to-do{
+    background-color: #FF6666;
+    color: #680909
+}
+
+.doing {
+    background-color: #FFFF66;
+    color: #71730A
+}
+
+.done {
+    background-color: #8DFD89;
+    color: #0B5200
 }

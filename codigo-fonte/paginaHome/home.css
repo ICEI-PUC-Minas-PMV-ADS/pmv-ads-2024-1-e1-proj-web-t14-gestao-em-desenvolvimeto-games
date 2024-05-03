@@ -37,6 +37,12 @@
     filter: drop-shadow(3px 3px 6px black);
 }
 
+@media only screen and (max-width: 484px){
+    .home-header {
+        justify-content: center;
+    }
+}
+
 /* CATEGORIES */
 
 .categories-container {
@@ -114,11 +120,32 @@
     transition: 0.5s all ease-in-out;
 }
 
+.active-card > p {
+    overflow-y: scroll;
+    text-overflow: ellipsis;
+}
+
 .active-card > span {
-    background-color: #8DFD89;
-    color: #0B5200;
     font-weight: 700;
     padding: 6px;
     border-radius: 4px;
+    margin-top: 5px;
 }
 
+.empyt-list-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.empty-list-icon {
+    max-width: 400px;
+    min-width: 200px;
+}
+
+.visible {
+    display: flex;
+}
