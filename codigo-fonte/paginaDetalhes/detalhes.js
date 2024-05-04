@@ -83,11 +83,7 @@ function selectStatus() {
 
 /* Mapeamento dos comentários do ativo digital */
 
-const comments = [
-    {id: '1', author: 'Roger Marques', message: 'asndsuiabdsayudasudbasudvasjihdbvasyhdvasydvasyvgsdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffgdfgdfgdfgdfdvasda'},
-    {id: '1', author: 'Roger Marques', message: 'asndsuiabdsayudasudbasudvasjihdbvasyhdvasydvasydvasda'},
-    {id: '1', author: 'Roger Marques', message: 'asndsuiabdsayudasudbasudvasjihdbvasyhdvasydvasydvasda'}
-]
+const comments = active.comments
 
 const commentList = document.querySelector('.comment-list')
 

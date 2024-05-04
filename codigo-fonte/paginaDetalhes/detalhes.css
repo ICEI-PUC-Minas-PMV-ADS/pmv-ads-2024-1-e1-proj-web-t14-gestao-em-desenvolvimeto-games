@@ -123,3 +123,14 @@
     margin-top: 6px;
     line-break: anywhere;
 }
+
+.empyt-comment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.empty-comments-icon {
+    width: 100px;
+}
