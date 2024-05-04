@@ -84,6 +84,7 @@
 
 .selected {
     scale: 1.2;
+    border-bottom: 1px solid black;
 }
 
 .comment-container {
