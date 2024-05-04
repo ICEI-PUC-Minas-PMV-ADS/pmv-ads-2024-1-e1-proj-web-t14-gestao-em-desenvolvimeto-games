@@ -35,11 +35,18 @@
                 <div class="comment-input-container">
                     <textarea class="comment-input" placeholder="Digite seu comentário" ></textarea>
 
-                    <button type="button">Postar Comentário</button>
+                    <button type="button" onclick="addComment()">Postar Comentário</button>
+                </div>
+
+                <ul class="comment-list"></ul>
+
+                <div class="empyt-comment-container">
+                    <img src="../imagens/comment-icon.png" alt="empty comments icon" class="empty-comments-icon">
+                    <h3>A lista de comentários está vazia!</h3>
+                    <p>Seja o primeiro a adicionar comentários a este ativo.</p>
                 </div>
             </section>
 
-            <ul class="comment-list"></ul>
         </aside>
     </main>
 </body>

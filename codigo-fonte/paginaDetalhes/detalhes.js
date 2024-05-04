@@ -9,8 +9,8 @@ function goBack() {
 let params = (new URL(document.location)).searchParams;
 let id = params.get("id");
 
-const active = JSON.parse(localStorage.getItem('active-list'))
-    .filter((active) => active.id === id)[0]
+const actives = JSON.parse(localStorage.getItem('active-list'))
+const active = actives.find((active) => active.id === id)
 
 const activeSection = document.querySelector('.active-details')
 
@@ -53,16 +53,9 @@ switch (active.status) {
 /* Seleção de status*/
 
 function changeActiveStatus(status) {
-    const activeList = JSON.parse(localStorage.getItem('active-list'))
-        .map((active) => {
-            if(active.id === id)  {
-                return {...active, status }
-            }
+    active.status = status
 
-            return active
-        })
-
-    localStorage.setItem('active-list', JSON.stringify(activeList))
+    localStorage.setItem('active-list', JSON.stringify(actives))
 }
 
 function selectStatus() {
@@ -83,27 +76,49 @@ function selectStatus() {
 
 /* Mapeamento dos comentários do ativo digital */
 
-const comments = [
-    {id: '1', author: 'Roger Marques', message: 'asndsuiabdsayudasudbasudvasjihdbvasyhdvasydvasyvgsdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffgdfgdfgdfgdfdvasda'},
-    {id: '1', author: 'Roger Marques', message: 'asndsuiabdsayudasudbasudvasjihdbvasyhdvasydvasydvasda'},
-    {id: '1', author: 'Roger Marques', message: 'asndsuiabdsayudasudbasudvasjihdbvasyhdvasydvasydvasda'}
-]
+const comments = active.comments
 
-const commentList = document.querySelector('.comment-list')
-
-comments.forEach((comment) => {
+function renderComments(comment) {
+    const commentList = document.querySelector('.comment-list')
     const li = document.createElement('li')
-    
+        
     const author = document.createElement('h3')
     author.innerHTML = comment.author
-
+    
     const message = document.createElement('p')
-    message.innerHTML = comment.message
-
+    message.innerHTML = comment.msg
+    
     li.appendChild(author)
     li.appendChild(message)
-
+    
     commentList.appendChild(li)
-})
+}
 
+if(comments.length === 0) {
+    const emptyCommentsMsg = document.querySelector('.empyt-comment-container')
+    emptyCommentsMsg.classList.add('visible')
+} else {
+    comments.forEach((comment) => {
+        renderComments(comment)
+    })
+}
 
+function addComment() {
+    const comment = document.querySelector('.comment-input')
+    const newComment = {
+        author: 'Roger Marques',
+        msg: comment.value
+    }
+    
+    if(active.comments.length === 0) {
+        const emptyCommentsMsg = document.querySelector('.empyt-comment-container')
+        emptyCommentsMsg.classList.remove('visible')
+    }
+
+    active.comments = [...active.comments, newComment]
+
+    renderComments(newComment)
+
+    localStorage.setItem('active-list', JSON.stringify(actives))
+    comment.value = ""
+}
