@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="perfil.css">
 </head>
 <body>
-    <div class="container">
-        <div>
-            <i class="fas fa-arrow-left" style="float: left;"></i>
-            <div class="avatar">
-                <img src="../imagens/user-icon.png" alt="">
-            </div>
-            <h2>Fulano de Souza</h2>
-            <p>fulano@gmail.com</p>
-            <button>Alterar informações</button>
-        </div>
-        
-    </div>   
+    <button type="button" class="back-btn" onclick="goBack()">
+        <img src="../imagens/Arrow.png" alt="Arrow icon">
+        <p>Voltar</p>
+    </button>
+
+    <main class="container">
+        <img src="../imagens/user-icon.png" alt="" class="avatar">
+        <h2>Fulano de Souza</h2>
+        <p>fulano@gmail.com</p>
+        <button type="button" onclick="goProfileDetails()">Alterar informações</button>
+    </main>   
 </body>
+<script src="perfil.js"></script>
 </html>
