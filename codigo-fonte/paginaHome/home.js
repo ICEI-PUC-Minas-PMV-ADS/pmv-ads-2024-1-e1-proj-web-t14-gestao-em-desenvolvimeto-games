@@ -113,6 +113,22 @@ function generateReport() {
     const total = document.createElement('p')
     total.innerHTML = `Total de Ativos na Plataforma: ${actives.length}`
     reportContainer.appendChild(total)
+
+    // Geração do relatório dos status
+    status.forEach((status, index) => {
+        if (index === 0) {
+            const statusTitle = document.createElement('h2')
+            statusTitle.innerHTML = 'Status:'
+            reportContainer.appendChild(statusTitle)
+        }
+
+        const statusQtd = actives.filter((active) => active.status === status).length
+        
+        const p = document.createElement('p')
+        p.innerHTML = `${status}: ${statusQtd}`
+        
+        reportContainer.appendChild(p)
+    })
 }
 
 function showReport() {
