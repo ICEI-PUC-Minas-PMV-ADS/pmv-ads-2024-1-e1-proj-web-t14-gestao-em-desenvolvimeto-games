@@ -104,3 +104,20 @@ function goToProfile() {
 function goToAddActivePage() {
     window.location.href = "../paginaAdicionarAtivos/adicionarAtivos.html"
 }
+
+const status = ['A Fazer', 'Em Andamento', 'Finalizado']
+
+function generateReport() {
+    const reportContainer = document.querySelector('.report-container')
+
+    const total = document.createElement('p')
+    total.innerHTML = `Total de Ativos na Plataforma: ${actives.length}`
+    reportContainer.appendChild(total)
+}
+
+function showReport() {
+    const reportContainer = document.querySelector('.report-container')
+    reportContainer.classList.add('visible')
+
+    generateReport()
+}
