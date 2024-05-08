@@ -129,6 +129,22 @@ function generateReport() {
         
         reportContainer.appendChild(p)
     })
+
+    // Geração do relatório das categorias
+    categories.forEach((category, index) => {
+        if (index === 0) {
+            const categoryTitle = document.createElement('h2')
+            categoryTitle.innerHTML = 'Categoria:'
+            reportContainer.appendChild(categoryTitle)
+        }
+
+        const categoryQtd = actives.filter((active) => active.category === category.toLowerCase()).length
+        
+        const p = document.createElement('p')
+        p.innerHTML = `${category}: ${categoryQtd}`
+        
+        reportContainer.appendChild(p)
+    })
 }
 
 function showReport() {
