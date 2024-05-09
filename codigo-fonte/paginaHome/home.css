@@ -172,6 +172,17 @@
     gap: 10px;
     padding: 10px;
     border-radius: 4px;
+    box-shadow: 6px 4px 20px 0px #000;
+}
+
+.close-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close-icon > img {
+    width: 25px;
 }
 
 .visible {

@@ -109,6 +109,9 @@ const status = ['A Fazer', 'Em Andamento', 'Finalizado']
 
 function generateReport() {
     const reportContainer = document.querySelector('.report-container')
+    const title = document.createElement('h1')
+    title.innerHTML = 'RELATÓRIO'
+    reportContainer.appendChild(title)
 
     const total = document.createElement('p')
     total.innerHTML = `Total de Ativos na Plataforma: ${actives.length}`
@@ -145,6 +148,17 @@ function generateReport() {
         
         reportContainer.appendChild(p)
     })
+
+    //Gerando o botão que fecha o relatório
+    const span = document.createElement('span')
+    span.classList.add('close-icon')
+    span.addEventListener('click', closeReport)
+
+    const closeIcon = new Image();
+    closeIcon.src = '../imagens/close-icon.png';
+   
+    span.appendChild(closeIcon)
+    reportContainer.appendChild(span)
 }
 
 function showReport() {
@@ -152,4 +166,16 @@ function showReport() {
     reportContainer.classList.add('visible')
 
     generateReport()
+
+    const button = document.querySelector('.report-btn')
+    button.disabled = true
+}
+
+function closeReport() {
+    const reportContainer = document.querySelector('.report-container')
+    reportContainer.classList.remove('visible')
+    reportContainer.innerHTML = ""
+
+    const button = document.querySelector('.report-btn')
+    button.disabled = false
 }
