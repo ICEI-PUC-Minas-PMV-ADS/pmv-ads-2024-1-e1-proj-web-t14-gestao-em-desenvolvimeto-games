@@ -106,7 +106,7 @@ if(comments.length === 0) {
 function addComment() {
     const comment = document.querySelector('.comment-input')
     const newComment = {
-        author: 'Roger Marques',
+        author: 'Rafael Marques',
         msg: comment.value
     }
     
