@@ -156,6 +156,10 @@
     padding: 0 10px;
 }
 
+.report-btn:disabled {
+    opacity: 0.5;
+}
+
 .report-container {
     display: none;
     width: 350px;
