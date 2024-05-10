@@ -104,3 +104,78 @@ function goToProfile() {
 function goToAddActivePage() {
     window.location.href = "../paginaAdicionarAtivos/adicionarAtivos.html"
 }
+
+const status = ['A Fazer', 'Em Andamento', 'Finalizado']
+
+function generateReport() {
+    const reportContainer = document.querySelector('.report-container')
+    const title = document.createElement('h1')
+    title.innerHTML = 'RELATÓRIO'
+    reportContainer.appendChild(title)
+
+    const total = document.createElement('p')
+    total.innerHTML = `Total de Ativos na Plataforma: ${actives.length}`
+    reportContainer.appendChild(total)
+
+    // Geração do relatório dos status
+    status.forEach((status, index) => {
+        if (index === 0) {
+            const statusTitle = document.createElement('h2')
+            statusTitle.innerHTML = 'Status:'
+            reportContainer.appendChild(statusTitle)
+        }
+
+        const statusQtd = actives.filter((active) => active.status === status).length
+        
+        const p = document.createElement('p')
+        p.innerHTML = `${status}: ${statusQtd}`
+        
+        reportContainer.appendChild(p)
+    })
+
+    // Geração do relatório das categorias
+    categories.forEach((category, index) => {
+        if (index === 0) {
+            const categoryTitle = document.createElement('h2')
+            categoryTitle.innerHTML = 'Categoria:'
+            reportContainer.appendChild(categoryTitle)
+        }
+
+        const categoryQtd = actives.filter((active) => active.category === category.toLowerCase()).length
+        
+        const p = document.createElement('p')
+        p.innerHTML = `${category}: ${categoryQtd}`
+        
+        reportContainer.appendChild(p)
+    })
+
+    //Gerando o botão que fecha o relatório
+    const span = document.createElement('span')
+    span.classList.add('close-icon')
+    span.addEventListener('click', closeReport)
+
+    const closeIcon = new Image();
+    closeIcon.src = '../imagens/close-icon.png';
+   
+    span.appendChild(closeIcon)
+    reportContainer.appendChild(span)
+}
+
+function showReport() {
+    const reportContainer = document.querySelector('.report-container')
+    reportContainer.classList.add('visible')
+
+    generateReport()
+
+    const button = document.querySelector('.report-btn')
+    button.disabled = true
+}
+
+function closeReport() {
+    const reportContainer = document.querySelector('.report-container')
+    reportContainer.classList.remove('visible')
+    reportContainer.innerHTML = ""
+
+    const button = document.querySelector('.report-btn')
+    button.disabled = false
+}

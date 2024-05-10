@@ -148,6 +148,49 @@
     min-width: 200px;
 }
 
+.report-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 40px;
+    padding: 0 10px;
+}
+
+.report-btn:disabled {
+    opacity: 0.5;
+}
+
+.report-container {
+    display: none;
+    width: 350px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: solid 1px #929292;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 6px 4px 20px 0px #000;
+}
+
+.close-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close-icon > img {
+    width: 25px;
+}
+
 .visible {
     display: flex;
 }
+
+
