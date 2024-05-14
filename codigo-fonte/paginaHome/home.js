@@ -105,6 +105,12 @@ function goToAddActivePage() {
     window.location.href = "../paginaAdicionarAtivos/adicionarAtivos.html"
 }
 
+//Função de redirecionamento para a página do ativo
+
+function goToAddCategoriesPage() {
+    window.location.href = "../paginaAdicionarCategorias/adicionarCategorias.html"
+}
+
 const status = ['A Fazer', 'Em Andamento', 'Finalizado']
 
 function generateReport() {
