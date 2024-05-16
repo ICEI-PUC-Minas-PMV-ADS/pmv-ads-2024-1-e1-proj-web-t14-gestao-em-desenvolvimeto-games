@@ -1,12 +1,25 @@
 # Template padrão da Aplicação
 
-Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
+O layout padrão do site foi construído com as linguagens de marcação HTML e CSS, e a linguagem de programação JavaScript foi utilizada para a construção do menu responsivo e também para as interações que a aplicação possui.
 
-[Apresente a estrutura padrão da sua aplicação.]
+As páginas terão como elementos padrões o menu de navegação, o header e o footer, além dos elementos de identidade visual citados abaixo:
 
-> **Links Úteis**:
->
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+<ul>
+<li>Cores: #445FEA(background do botões), #EEF4F7(background), #101820(títulos);</li>
+<li>Font-family: Poppins;</li>
+<li>Font-size: 16px e 20px.</li>
+</ul>
+
+## Logotipo
+
+Optamos pela escolha de uma logotipo mais moderna, transmitindo confiança e autoridade.
+
+<figure> 
+  <img src="https://i.ibb.co/hW1BMxZ/Captura-de-tela-de-2024-04-12-17-37-58.png">
+  <figcaption> Figura 1 - Logo
+</figure> 
+
+
+
+
+
