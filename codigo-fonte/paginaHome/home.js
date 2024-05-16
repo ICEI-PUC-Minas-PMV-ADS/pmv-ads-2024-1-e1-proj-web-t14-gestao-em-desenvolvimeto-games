@@ -34,6 +34,17 @@ categories.forEach((category) => {
     categoriesList.appendChild(li)
 })
 
+/* Função responsável pela substituição da imagem de erro por uma padrão*/
+
+function replaceImg(event) {
+    const img = event.target
+
+    img.src = 'https://static-00.iconduck.com/assets.00/image-not-found-01-icon-2048x2048-95wsi7vg.png';
+    img.alt = 'Error img';
+    img.classList.add('thumbnail-error')
+
+}
+
 /* Mapeamento dos ativos digitais */
 
 function renderActives(actives) {
@@ -43,6 +54,7 @@ function renderActives(actives) {
     
         const img = document.createElement('img')
         img.src = active.img
+        img.onerror = replaceImg
     
         const title = document.createElement('h3')
         title.innerHTML = active.title
@@ -105,7 +117,15 @@ function goToAddActivePage() {
     window.location.href = "../paginaAdicionarAtivos/adicionarAtivos.html"
 }
 
+//Função de redirecionamento para a página do ativo
+
+function goToAddCategoriesPage() {
+    window.location.href = "../paginaAdicionarCategorias/adicionarCategorias.html"
+}
+
 const status = ['A Fazer', 'Em Andamento', 'Finalizado']
+
+//Função de geração do report
 
 function generateReport() {
     const reportContainer = document.querySelector('.report-container')
@@ -161,6 +181,8 @@ function generateReport() {
     reportContainer.appendChild(span)
 }
 
+//Função de responsável por "abrir" o report
+
 function showReport() {
     const reportContainer = document.querySelector('.report-container')
     reportContainer.classList.add('visible')
@@ -171,6 +193,8 @@ function showReport() {
     button.disabled = true
 }
 
+//Função de responsável por "fechar" o report
+
 function closeReport() {
     const reportContainer = document.querySelector('.report-container')
     reportContainer.classList.remove('visible')
@@ -179,3 +203,4 @@ function closeReport() {
     const button = document.querySelector('.report-btn')
     button.disabled = false
 }
+
