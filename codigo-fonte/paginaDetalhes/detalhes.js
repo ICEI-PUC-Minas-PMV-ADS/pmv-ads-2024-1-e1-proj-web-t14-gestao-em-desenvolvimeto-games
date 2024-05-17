@@ -4,6 +4,15 @@ function goBack() {
     window.location.href = "../paginaHome/home.html"
 }
 
+function replaceImg(event) {
+    const img = event.target
+
+    img.src = 'https://static-00.iconduck.com/assets.00/image-not-found-01-icon-2048x2048-95wsi7vg.png';
+    img.alt = 'Error img';
+    img.classList.add('thumbnail-error')
+
+}
+
 /* Mapeamento dos detalhes do ativo digital */
 
 let params = (new URL(document.location)).searchParams;
@@ -17,6 +26,7 @@ const activeSection = document.querySelector('.active-details')
 const activeImg = document.createElement('img')
 activeImg.src = active.img
 activeImg.className = 'active-img'
+activeImg.onerror = replaceImg
 
 const activeTitle = document.createElement('h1')
 activeTitle.innerHTML = active.title

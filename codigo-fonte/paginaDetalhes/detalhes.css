@@ -74,6 +74,10 @@
     border-radius: 4px;
 }
 
+.thumbnail-error {
+    object-fit: contain;
+}
+
 .active-title {
     font-weight: bolder;
 }
