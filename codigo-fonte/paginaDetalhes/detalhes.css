@@ -39,6 +39,27 @@
     margin-top: 30px;
 }
 
+.btns-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-btn {
+    background-color: #F96458;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.delete-btn:hover {
+    background-color: #f87067;
+}
+
+.delete-btn:active {
+    background-color: #ff5044;
+}
+
+
 .active-details {
     display: flex;
     flex-direction: column;

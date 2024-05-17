@@ -30,6 +30,15 @@ activeSection.appendChild(activeImg)
 activeSection.appendChild(activeTitle)
 activeSection.appendChild(activeDesc)
 
+
+// Função responsável pela remoção de um ativo
+function deleteActive() {
+    const activesFiltered = actives.filter((activeToRemove) => activeToRemove.id !== active.id)
+
+    localStorage.setItem('active-list', JSON.stringify(activesFiltered))
+    goBack()
+}
+
 switch (active.status) {
     case 'A Fazer':
         const toDoStatus = document.querySelector('.to-do')
