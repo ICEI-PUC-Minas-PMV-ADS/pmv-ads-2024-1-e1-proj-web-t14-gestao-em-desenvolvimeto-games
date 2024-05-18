@@ -40,6 +40,10 @@ activeSection.appendChild(activeImg)
 activeSection.appendChild(activeTitle)
 activeSection.appendChild(activeDesc)
 
+function goToEditPage() {
+    window.location.href = `../paginaEditarAtivo/editarAtivo.html?id=${id}`
+}
+
 
 // Função responsável pela remoção de um ativo
 function deleteActive() {
