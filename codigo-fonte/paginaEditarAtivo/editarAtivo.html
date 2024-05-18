@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="editarAtivo.css">
+</head>
+<body>
+    <header class="add-active-header">
+        <img src="../imagens/logo.png" alt="Patch logo" class="logo" onclick="goBack()"/>
+    </header>
+    <main>
+        <button type="button" class="back-btn" onclick="javascript:history.go(-1)">
+            <img src="../imagens/Arrow.png" alt="Arrow icon">
+            <p>Voltar</p>
+        </button>
+
+        <form class="add-active-form">
+            <h1>Editar Ativo</h1>
+
+            <input type="text" name="title" id="title" placeholder="Título" required>
+
+            <textarea name="desc" id="desc" cols="30" rows="10" placeholder="Descrição" required></textarea>
+
+            <input type="text" name="img-url" id="img-url" placeholder="Url da Imagem">
+            
+            <select name="categories" id="category">
+                <option value="texturas">Textura</option>
+                <option value="animações">Animação</option>
+                <option value="2d">2D</option>
+                <option value="3d">3D</option>
+            </select>
+
+            <button type="button" class="add-btn" onclick="editActive()">Editar</button>
+        </form>
+    </main>
+</body>
+<script src="./editarAtivo.js"></script>
+</html>

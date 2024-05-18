@@ -4,10 +4,6 @@ function goBack() {
     window.location.href = "../paginaHome/home.html"
 }
 
-function goToEditPage() {
-    window.location.href = '../paginaEditarAtivo/editarAtivo.html'
-}
-
 function replaceImg(event) {
     const img = event.target
 
@@ -43,6 +39,10 @@ activeDesc.className = 'active-desc'
 activeSection.appendChild(activeImg)
 activeSection.appendChild(activeTitle)
 activeSection.appendChild(activeDesc)
+
+function goToEditPage() {
+    window.location.href = `../paginaEditarAtivo/editarAtivo.html?id=${id}`
+}
 
 
 // Função responsável pela remoção de um ativo
