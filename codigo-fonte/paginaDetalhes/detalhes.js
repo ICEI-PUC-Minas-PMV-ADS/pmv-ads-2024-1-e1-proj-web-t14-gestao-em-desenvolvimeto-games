@@ -4,6 +4,10 @@ function goBack() {
     window.location.href = "../paginaHome/home.html"
 }
 
+function goToEditPage() {
+    window.location.href = '../paginaEditarAtivo/editarAtivo.html'
+}
+
 function replaceImg(event) {
     const img = event.target
 
