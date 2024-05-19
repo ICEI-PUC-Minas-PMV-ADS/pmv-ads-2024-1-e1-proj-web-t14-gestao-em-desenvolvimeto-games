@@ -11,7 +11,19 @@ const emptyListContainer = document.querySelector('.empyt-list-container')
 
 //Seleção de categorias
 
-function selectCategory() {
+function selectCategory(event) {
+    const category = event.target
+    const someCategoryIsSelected = document.querySelector('.selected')
+    const removeFilterBtn = document.querySelector('.remove-filter-btn')
+
+    removeFilterBtn.disabled = false
+
+    if (someCategoryIsSelected) {
+        someCategoryIsSelected.classList.remove('selected')
+    }
+
+    category.classList.add('selected')
+
     const filteredActives =actives.filter((active) => active.category.
         includes(event.target.innerHTML.toLowerCase()))
 
@@ -21,6 +33,17 @@ function selectCategory() {
 
     emptyListContainer.classList.remove('visible')
     renderActives(filteredActives)
+}
+
+//Remoção de filtro
+
+function removeFilter() {
+    const removeFilterBtn = document.querySelector('.remove-filter-btn')
+
+    removeFilterBtn.disabled = true
+    activesList.innerHTML = ""
+    
+    renderActives(actives)    
 }
 
 //Mapeamento de categorias
