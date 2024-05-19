@@ -61,6 +61,14 @@
     list-style: none;
 }
 
+.remove-filter-btn {
+    padding: 10px;
+}
+
+.remove-filter-btn:disabled {
+    opacity: 0.5;
+}
+
 .categories-card {
     background-color: #FFF;
     padding: 6px;
