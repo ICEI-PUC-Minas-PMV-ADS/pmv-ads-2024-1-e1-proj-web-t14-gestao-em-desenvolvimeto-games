@@ -32,12 +32,17 @@ const activeTitle = document.createElement('h1')
 activeTitle.innerHTML = active.title
 activeTitle.className = 'active-title'
 
+const activeCategory = document.createElement('span')
+activeCategory.innerHTML = active.category
+activeCategory.classList.add('category')
+
 const activeDesc = document.createElement('p')
 activeDesc.innerHTML = active.desc
 activeDesc.className = 'active-desc'
 
 activeSection.appendChild(activeImg)
 activeSection.appendChild(activeTitle)
+activeSection.appendChild(activeCategory)
 activeSection.appendChild(activeDesc)
 
 function goToEditPage() {
