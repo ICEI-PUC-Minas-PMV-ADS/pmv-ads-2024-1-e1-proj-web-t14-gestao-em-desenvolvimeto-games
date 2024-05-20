@@ -19,7 +19,7 @@ body {
 }
 
 .cadastro1 {
-    margin-bottom: 20px;
+    margin-bottom: px;
     width: 100%;
 }
 
@@ -31,11 +31,8 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    width: 100%;
     height: 30px;
-    border: 1px solid #b6b6b6;
-    border-radius: 3px;
-    }
+}
 
 button {
     background-color: rgb(11, 145, 254);
@@ -53,4 +50,22 @@ button:hover {
 
 .link {
     margin-top: 20px;
+}
+
+#SucessMSG{
+    text-align: center;
+    color: #00bb00;
+    background-color: #bbffbe;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+#ErrorMSG{
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
 }

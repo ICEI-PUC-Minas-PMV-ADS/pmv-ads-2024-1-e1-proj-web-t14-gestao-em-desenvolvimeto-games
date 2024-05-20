@@ -20,6 +20,10 @@ body {
     flex-direction: column;
 }
 
+#email, #password {
+    height: 30px;
+}
+
 .login1 {
     margin-bottom: 20px;
     width: 100%;
@@ -29,14 +33,6 @@ body {
 label {
     display: block;
     margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="password"] {
-    width: 300px;
-    height: 30px;
-    border: 1px solid #b6b6b6;
-    border-radius: 3px;
 }
 
 button {
