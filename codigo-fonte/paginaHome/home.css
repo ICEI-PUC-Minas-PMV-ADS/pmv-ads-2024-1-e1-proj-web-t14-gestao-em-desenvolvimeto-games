@@ -151,6 +151,11 @@
     margin-top: 5px;
 }
 
+.category {
+    background-color: gray;
+    text-transform: capitalize;
+}
+
 .empyt-list-container {
     display: none;
     flex-direction: column;

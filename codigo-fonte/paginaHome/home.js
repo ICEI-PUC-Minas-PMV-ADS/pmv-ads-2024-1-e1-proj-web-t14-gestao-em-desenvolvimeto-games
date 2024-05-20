@@ -81,6 +81,10 @@ function renderActives(actives) {
     
         const title = document.createElement('h3')
         title.innerHTML = active.title
+
+        const category = document.createElement('span')
+        category.innerHTML = active.category
+        category.classList.add('category')
     
         const description = document.createElement('p')
         description.innerHTML = active.desc
@@ -107,6 +111,7 @@ function renderActives(actives) {
     
         li.appendChild(img)
         li.appendChild(title)
+        li.appendChild(category)
         li.appendChild(description)
         li.appendChild(status)
     
