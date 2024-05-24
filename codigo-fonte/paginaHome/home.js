@@ -155,6 +155,25 @@ const status = ['A Fazer', 'Em Andamento', 'Finalizado']
 
 //Função de geração do report
 
+function getQty(status) {
+    const statusQtd = actives.filter((active) => active.status === status).length
+
+    return statusQtd
+}
+
+function getCategoryQtd(category) {
+    let qtd = []
+    
+    categories.forEach(category => {
+        const categoryQtd = actives
+            .filter((active) => active.category === category.toLowerCase()).length ?? 0
+
+        qtd.push(categoryQtd)
+    });
+
+    return qtd 
+}
+
 function generateReport() {
     const reportContainer = document.querySelector('.report-container')
     const title = document.createElement('h1')
@@ -165,39 +184,83 @@ function generateReport() {
     total.innerHTML = `Total de Ativos na Plataforma: ${actives.length}`
     reportContainer.appendChild(total)
 
-    // Geração do relatório dos status
-    status.forEach((status, index) => {
-        if (index === 0) {
-            const statusTitle = document.createElement('h2')
-            statusTitle.innerHTML = 'Status:'
-            reportContainer.appendChild(statusTitle)
+    const statusTitle = document.createElement('h2')
+    statusTitle.innerHTML = 'Status:'
+    reportContainer.appendChild(statusTitle)
+
+    const firstChart = document.createElement('canvas')
+    firstChart.id = 'myChart'
+    reportContainer.appendChild(firstChart)
+
+    const statusChart = document.getElementById('myChart').getContext('2d');
+    new Chart(statusChart, {
+    type: 'pie',
+    data: {
+        labels: status,
+        datasets: [{
+            label: 'Quantidade de Ativos',
+            data: [getQty(status[0]), getQty(status[1]), getQty(status[2])],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+});
+
+     // Função para gerar cores HSL
+     function generateColors(count) {
+        const colors = [];
+        const saturation = 70; // Saturação (70%)
+        const lightness = 50; // Luminosidade (50%)
+        
+        for (let i = 0; i < count; i++) {
+            const hue = i * (360 / count); // Distribui os tons uniformemente
+            colors.push(`hsl(${hue}, ${saturation}%, ${lightness}%)`);
         }
+        return colors;
+    }
 
-        const statusQtd = actives.filter((active) => active.status === status).length
-        
-        const p = document.createElement('p')
-        p.innerHTML = `${status}: ${statusQtd}`
-        
-        reportContainer.appendChild(p)
-    })
+    // Gerar cores dinamicamente com base no número de dados
+    const backgroundColors = generateColors(categories.length);
+    const borderColors = backgroundColors.map(color => {
+        const [h, s, l] = color.match(/\d+/g).map(Number);
+        return `hsl(${h}, ${s}%, ${l - 20}%)`; // Ajuste da luminosidade para bordas
+    });
 
-    // Geração do relatório das categorias
-    categories.forEach((category, index) => {
-        if (index === 0) {
-            const categoryTitle = document.createElement('h2')
-            categoryTitle.innerHTML = 'Categoria:'
-            reportContainer.appendChild(categoryTitle)
-        }
+    const categoryTitle = document.createElement('h2')
+    categoryTitle.innerHTML = 'Categorias:'
+    reportContainer.appendChild(categoryTitle)
 
-        const categoryQtd = actives.filter((active) => active.category === category.toLowerCase()).length
-        
-        const p = document.createElement('p')
-        p.innerHTML = `${category}: ${categoryQtd}`
-        
-        reportContainer.appendChild(p)
-    })
+    const secondChart = document.createElement('canvas')
+    secondChart.id = 'myChart2'
+    reportContainer.appendChild(secondChart)
 
-    //Gerando o botão que fecha o relatório
+    const categoryChart = document.getElementById('myChart2').getContext('2d');
+    new Chart(categoryChart, {
+    type: 'pie',
+    data: {
+        labels: categories,
+        datasets: [{
+            label: 'Quantidade de Ativos',
+            data: getCategoryQtd(),
+            backgroundColor: backgroundColors,
+            borderColor: borderColors,
+            borderWidth: 1
+        }]
+    },
+});
+
+//Gerando o botão que fecha o relatório
+
     const span = document.createElement('span')
     span.classList.add('close-icon')
     span.addEventListener('click', closeReport)
