@@ -13,19 +13,19 @@
         <img src="../imagens/logo.png" />
     </header>
 
+    <button class="back-btn" onclick="javascript:history.go(-1)">
+        <img id="arrow" src="../imagens/Arrow.png"/> 
+        <p>Voltar</p>
+    </button>
     <main>
-        <button class="back-btn" onclick="javascript:history.go(-1)">
-            <img id="arrow" src="../imagens/Arrow.png"/> 
-            <p>Voltar</p>
-        </button>
-
         <form class="form">
             <h1>Editar Perfil</h1>
 
-            <input type="text" class="rectangle"  placeholder=" Nome">
-            <input type="text"  class="rectangle" placeholder=" Email" >
-            <button class="button">Editar</button> 
+            <input type="text" class="rectangle"  placeholder=" Nome" id="name">
+            <input type="text"  class="rectangle" placeholder=" Email" id="email">
+            <button type="button" class="button" onclick="editProfile()">Editar</button> 
         </form>
     </main>
 </body>
+<script src="editarPerfil.js"></script>
 </html>
