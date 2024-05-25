@@ -153,15 +153,13 @@ function goToAddCategoriesPage() {
 
 const status = ['A Fazer', 'Em Andamento', 'Finalizado']
 
-//Função de geração do report
-
-function getQty(status) {
+function getStatusQty(status) {
     const statusQtd = actives.filter((active) => active.status === status).length
 
     return statusQtd
 }
 
-function getCategoryQtd(category) {
+function getCategoryQty(category) {
     let qtd = []
     
     categories.forEach(category => {
@@ -174,6 +172,29 @@ function getCategoryQtd(category) {
     return qtd 
 }
 
+// Função para gerar cores RGBA aleatórias
+
+function generateRandomRGBA(count) {
+        const colors = [];
+    for (let i = 0; i < count; i++) {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        const a = 0.5; 
+        colors.push(`rgba(${r}, ${g}, ${b}, ${a})`);
+    }
+    return colors;
+}
+    
+// Função para escurecer uma cor RGBA
+
+function darkenColor(rgba, _factor) {
+    const colorParts = rgba.match(/\d+/g);
+    let [r, g, b] = colorParts.map(Number);
+    
+    return `rgba(${r}, ${g}, ${b}, 1)`;
+}
+    
 function generateReport() {
     const reportContainer = document.querySelector('.report-container')
     const title = document.createElement('h1')
@@ -188,6 +209,8 @@ function generateReport() {
     statusTitle.innerHTML = 'Status:'
     reportContainer.appendChild(statusTitle)
 
+    //GERAÇÃO DO PRIMEIRO GRÁFICO
+
     const firstChart = document.createElement('canvas')
     firstChart.id = 'myChart'
     reportContainer.appendChild(firstChart)
@@ -199,42 +222,26 @@ function generateReport() {
         labels: status,
         datasets: [{
             label: 'Quantidade de Ativos',
-            data: [getQty(status[0]), getQty(status[1]), getQty(status[2])],
+            data: [getStatusQty(status[0]), getStatusQty(status[1]), getStatusQty(status[2])],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(230, 245, 39, 0.5)',
+                'rgba(39, 245, 63, 0.5)',
 
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
+                'rgba(255, 99, 122, 1)',
+                'rgba(230, 245, 39, 1)',
+                'rgba(39, 245, 63, 1)',
             ],
             borderWidth: 1
         }]
     },
 });
 
-     // Função para gerar cores HSL
-     function generateColors(count) {
-        const colors = [];
-        const saturation = 70; // Saturação (70%)
-        const lightness = 50; // Luminosidade (50%)
-        
-        for (let i = 0; i < count; i++) {
-            const hue = i * (360 / count); // Distribui os tons uniformemente
-            colors.push(`hsl(${hue}, ${saturation}%, ${lightness}%)`);
-        }
-        return colors;
-    }
-
     // Gerar cores dinamicamente com base no número de dados
-    const backgroundColors = generateColors(categories.length);
-    const borderColors = backgroundColors.map(color => {
-        const [h, s, l] = color.match(/\d+/g).map(Number);
-        return `hsl(${h}, ${s}%, ${l - 20}%)`; // Ajuste da luminosidade para bordas
-    });
+    const backgroundColors = generateRandomRGBA(categories.length);
+    const borderColors = backgroundColors.map(color => darkenColor(color, 0))
 
     const categoryTitle = document.createElement('h2')
     categoryTitle.innerHTML = 'Categorias:'
@@ -251,7 +258,7 @@ function generateReport() {
         labels: categories,
         datasets: [{
             label: 'Quantidade de Ativos',
-            data: getCategoryQtd(),
+            data: getCategoryQty(),
             backgroundColor: backgroundColors,
             borderColor: borderColors,
             borderWidth: 1
