@@ -199,6 +199,8 @@
     padding: 10px;
     border-radius: 4px;
     box-shadow: 6px 4px 20px 0px #000;
+    max-height: 500px;
+    overflow-y: scroll;
 }
 
 .close-icon {

@@ -153,8 +153,48 @@ function goToAddCategoriesPage() {
 
 const status = ['A Fazer', 'Em Andamento', 'Finalizado']
 
-//Função de geração do report
+function getStatusQty(status) {
+    const statusQtd = actives.filter((active) => active.status === status).length
 
+    return statusQtd
+}
+
+function getCategoryQty(category) {
+    let qtd = []
+    
+    categories.forEach(category => {
+        const categoryQtd = actives
+            .filter((active) => active.category === category.toLowerCase()).length ?? 0
+
+        qtd.push(categoryQtd)
+    });
+
+    return qtd 
+}
+
+// Função para gerar cores RGBA aleatórias
+
+function generateRandomRGBA(count) {
+        const colors = [];
+    for (let i = 0; i < count; i++) {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        const a = 0.5; 
+        colors.push(`rgba(${r}, ${g}, ${b}, ${a})`);
+    }
+    return colors;
+}
+    
+// Função para escurecer uma cor RGBA
+
+function darkenColor(rgba, _factor) {
+    const colorParts = rgba.match(/\d+/g);
+    let [r, g, b] = colorParts.map(Number);
+    
+    return `rgba(${r}, ${g}, ${b}, 1)`;
+}
+    
 function generateReport() {
     const reportContainer = document.querySelector('.report-container')
     const title = document.createElement('h1')
@@ -165,39 +205,69 @@ function generateReport() {
     total.innerHTML = `Total de Ativos na Plataforma: ${actives.length}`
     reportContainer.appendChild(total)
 
-    // Geração do relatório dos status
-    status.forEach((status, index) => {
-        if (index === 0) {
-            const statusTitle = document.createElement('h2')
-            statusTitle.innerHTML = 'Status:'
-            reportContainer.appendChild(statusTitle)
-        }
+    const statusTitle = document.createElement('h2')
+    statusTitle.innerHTML = 'Status:'
+    reportContainer.appendChild(statusTitle)
 
-        const statusQtd = actives.filter((active) => active.status === status).length
-        
-        const p = document.createElement('p')
-        p.innerHTML = `${status}: ${statusQtd}`
-        
-        reportContainer.appendChild(p)
-    })
+    //GERAÇÃO DO PRIMEIRO GRÁFICO
 
-    // Geração do relatório das categorias
-    categories.forEach((category, index) => {
-        if (index === 0) {
-            const categoryTitle = document.createElement('h2')
-            categoryTitle.innerHTML = 'Categoria:'
-            reportContainer.appendChild(categoryTitle)
-        }
+    const firstChart = document.createElement('canvas')
+    firstChart.id = 'myChart'
+    reportContainer.appendChild(firstChart)
 
-        const categoryQtd = actives.filter((active) => active.category === category.toLowerCase()).length
-        
-        const p = document.createElement('p')
-        p.innerHTML = `${category}: ${categoryQtd}`
-        
-        reportContainer.appendChild(p)
-    })
+    const statusChart = document.getElementById('myChart').getContext('2d');
+    new Chart(statusChart, {
+    type: 'pie',
+    data: {
+        labels: status,
+        datasets: [{
+            label: 'Quantidade de Ativos',
+            data: [getStatusQty(status[0]), getStatusQty(status[1]), getStatusQty(status[2])],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(230, 245, 39, 0.5)',
+                'rgba(39, 245, 63, 0.5)',
 
-    //Gerando o botão que fecha o relatório
+            ],
+            borderColor: [
+                'rgba(255, 99, 122, 1)',
+                'rgba(230, 245, 39, 1)',
+                'rgba(39, 245, 63, 1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+});
+
+    // Gerar cores dinamicamente com base no número de dados
+    const backgroundColors = generateRandomRGBA(categories.length);
+    const borderColors = backgroundColors.map(color => darkenColor(color, 0))
+
+    const categoryTitle = document.createElement('h2')
+    categoryTitle.innerHTML = 'Categorias:'
+    reportContainer.appendChild(categoryTitle)
+
+    const secondChart = document.createElement('canvas')
+    secondChart.id = 'myChart2'
+    reportContainer.appendChild(secondChart)
+
+    const categoryChart = document.getElementById('myChart2').getContext('2d');
+    new Chart(categoryChart, {
+    type: 'pie',
+    data: {
+        labels: categories,
+        datasets: [{
+            label: 'Quantidade de Ativos',
+            data: getCategoryQty(),
+            backgroundColor: backgroundColors,
+            borderColor: borderColors,
+            borderWidth: 1
+        }]
+    },
+});
+
+//Gerando o botão que fecha o relatório
+
     const span = document.createElement('span')
     span.classList.add('close-icon')
     span.addEventListener('click', closeReport)
