@@ -1,3 +1,17 @@
+const selectCategories = document.querySelector('#category')
+const categories = JSON.parse(localStorage.getItem('categories')) ?? []
+
+// Renderizando as categorias dinamicamente
+categories.forEach(category => {
+    const option = document.createElement('option')
+    option.value = category.toLowerCase()
+    option.innerHTML = category
+
+    selectCategories.appendChild(option)
+});
+
+
+
 /* Função responsável pela geração de um id aleatório */
 
 function generateId() {

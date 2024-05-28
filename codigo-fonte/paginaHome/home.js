@@ -1,7 +1,8 @@
 /* Mapeamento de categorias */
 const actives = JSON.parse(localStorage.getItem('active-list'))
 
-const categories = ['2D', '3D', 'Animações', 'Texturas']
+const storageCategories = JSON.parse(localStorage.getItem('categories')) ?? []
+const categories = ['2D', '3D', 'Texturas', ...storageCategories]
 
 const categoriesList = document.querySelector('.categories-list')
 
@@ -65,7 +66,6 @@ function replaceImg(event) {
     img.src = 'https://static-00.iconduck.com/assets.00/image-not-found-01-icon-2048x2048-95wsi7vg.png';
     img.alt = 'Error img';
     img.classList.add('thumbnail-error')
-
 }
 
 /* Mapeamento dos ativos digitais */
