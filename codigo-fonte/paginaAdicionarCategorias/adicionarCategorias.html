@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
             <img src="../imagens/logo.png" loading="lazy"/> <br>
         </div>
         <div class="adcCategoria">
-            <button class="box">
+            <button class="box" onclick="goBack()">
                 <img src="../imagens/Arrow.png" />
                 <h2>Voltar</h2>  
             </button>
@@ -21,11 +21,12 @@
         <h2>Nova Categoria</h2>
         <div class="form">
             <form>
-                <p class="info"><input type="text" class="rectangle" placeholder=" Nome"></p>
-                <button class="button">Adicionar</button>
+                <p class="info"><input type="text" class="rectangle" id="categoryJs" placeholder=" Nome"></p>
+                <button class="button" onclick="createCategory()">Adicionar</button>
             </form>
         </div>
-
+    
     </div>
 </body>
+<script src="./adicionarCategorias.js"></script>
 </html>
