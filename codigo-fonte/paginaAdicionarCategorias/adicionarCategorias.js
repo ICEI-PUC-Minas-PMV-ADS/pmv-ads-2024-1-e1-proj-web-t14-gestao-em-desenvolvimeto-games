@@ -14,3 +14,7 @@ function createCategory() {
 
     }
 }
+
+function goBack() {
+    window.location.href = "../paginaHome/home.html"
+}
