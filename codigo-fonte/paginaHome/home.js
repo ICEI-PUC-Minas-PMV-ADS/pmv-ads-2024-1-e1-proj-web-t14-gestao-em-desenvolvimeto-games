@@ -43,6 +43,10 @@ function removeFilter() {
 
     removeFilterBtn.disabled = true
     activesList.innerHTML = ""
+
+    if(emptyListContainer) {
+        emptyListContainer.classList.remove('visible')
+    }
     
     renderActives(actives)    
 }
