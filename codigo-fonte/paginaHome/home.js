@@ -295,10 +295,18 @@ function showReport() {
 
 function closeReport() {
     const reportContainer = document.querySelector('.report-container')
+    reportContainer.classList.add('not-visible')
     reportContainer.classList.remove('visible')
+
+    setTimeout(() => {
+        reportContainer.classList.remove('not-visible')
+
+    }, 300)
+
+
     reportContainer.innerHTML = ""
+
 
     const button = document.querySelector('.report-btn')
     button.disabled = false
 }
-
