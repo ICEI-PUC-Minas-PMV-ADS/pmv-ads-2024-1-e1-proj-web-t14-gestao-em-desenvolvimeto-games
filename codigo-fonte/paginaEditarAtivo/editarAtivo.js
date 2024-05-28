@@ -2,13 +2,23 @@ function goBack() {
     window.location.href = "../paginaHome/home.html"
 }
 
+const selectCategories = document.querySelector('#category')
+const categories = JSON.parse(localStorage.getItem('categories')) ?? []
+
+// Renderizando as categorias dinamicamente
+categories.forEach(category => {
+    const option = document.createElement('option')
+    option.value = category.toLowerCase()
+    option.innerHTML = category
+
+    selectCategories.appendChild(option)
+});
+
 let params = (new URL(document.location)).searchParams;
 let id = params.get("id");
 
 const actives = JSON.parse(localStorage.getItem('active-list'))
 const active = actives.find((active) => active.id === id)
-
-console.log(active);
 
 const tittleInput = document.querySelector('#title')
 tittleInput.value = active.title
