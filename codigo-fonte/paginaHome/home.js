@@ -47,6 +47,12 @@ function removeFilter() {
     if(emptyListContainer) {
         emptyListContainer.classList.remove('visible')
     }
+
+    const someCategoryIsSelected = document.querySelector('.selected')
+
+    if (someCategoryIsSelected) {
+        someCategoryIsSelected.classList.remove('selected')
+    }
     
     renderActives(actives)    
 }
