@@ -10,6 +10,17 @@
     text-align: center;
 }
 
+.profile-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+.profile-header > img {
+    width: 350px;
+}
+
 .back-btn {
     background-color: transparent;
     display: flex;
@@ -18,7 +29,7 @@
     color: #1E1E1E;
     font-size: 16px;
     font-weight: 800;
-    margin: 50px 0 0 40px;
+    margin: 0 0 0 40px;
 }
 
 .back-btn:hover {
@@ -43,4 +54,16 @@ button {
     font-weight: 800;
     height: 40px;
     font-size: 16px;
+}
+
+.logout-btn {
+    background-color: #F96458;
+}
+
+.logout-btn:hover {
+    background-color: #f87067;
+}
+
+.logout-btn:active {
+    background-color: #ff5044;
 }

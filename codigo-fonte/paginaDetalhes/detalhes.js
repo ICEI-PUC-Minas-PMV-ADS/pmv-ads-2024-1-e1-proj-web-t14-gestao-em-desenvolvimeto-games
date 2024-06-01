@@ -133,8 +133,10 @@ if(comments.length === 0) {
 
 function addComment() {
     const comment = document.querySelector('.comment-input')
+    const user = JSON.parse(localStorage.getItem('usuario'))
+
     const newComment = {
-        author: 'Roger Marques',
+        author: user.nome,
         msg: comment.value
     }
     
