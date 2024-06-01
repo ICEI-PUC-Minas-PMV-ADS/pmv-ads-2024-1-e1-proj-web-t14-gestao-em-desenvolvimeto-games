@@ -60,6 +60,7 @@
     flex-wrap: wrap;
     gap: 20px;
     list-style: none;
+    text-transform: capitalize;
 }
 
 .remove-filter-btn {
@@ -165,7 +166,7 @@
 
 .category {
     background-color: gray;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .empyt-list-container {
