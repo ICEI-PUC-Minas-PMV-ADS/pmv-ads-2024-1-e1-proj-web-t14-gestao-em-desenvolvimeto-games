@@ -32,6 +32,7 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
     <li>Informar o endereço do site.</li>
     <li>Visualizar a página de Cadastro.</li>
     <li>Digitar corretamente o nome de usuário, e-mail e senha.</li>
+    <li>Clicar em "Criar Conta"</li>
     <li>Visualizar a página de login</li>
    </ol>
    </td>
@@ -63,6 +64,7 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
     <li>Informar o endereço do site.</li>
     <li>Visualizar a página de Login</li>
     <li>Digitar corretamente o e-mail e senha que foram cadastrados na plataforma.</li>
+    <li>Clicar em "Entrar"</li>
     <li>Visualizar a página Home.</li>
    </ol>
    </td>
