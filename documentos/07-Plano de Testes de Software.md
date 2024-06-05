@@ -138,3 +138,79 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
   <td>Henrique Chamone</td>
  </tr>
 </table>
+
+<table>
+ <tr>
+  <th>Caso de teste</th>
+  <th>Requisitos associados</th>
+  <th>Objetivo do teste</th>
+  <th>Passos</th>
+  <th>Critérios de êxito</th>
+  <th>Responsável</th>
+ </tr>
+ <tr>
+  <td>CT-05: Verificar o funcionamento da tela de perfil do usuário.</td>
+  <td>
+   <ul>
+    <li>RF-008:	Deverá ser possível verificar os dados
+de cadastro do usuário através da tela de
+perfil.</li>
+   </ul>
+  </td>
+  <td>Verificar se é possível visualizar as informações do perfil do usuário na plataforma.</td>
+  <td>
+   <ol>
+    <li>Acessar o navegador.</li>
+    <li>Informar o endereço do site.</li>
+   <li>Visualizar a página de Login.</li>
+    <li>Digitar corretamente e-mail e senha do usuário.</li>
+    <li>Clicar em "Entrar"</li>
+    <li>Visualizar a página Home</li>
+    <li>Clicar no ícone de perfil no canto superior direito.</li>
+    <li> Visualizar a tela de perfil do usuário.</li>
+   </ol>
+   </td>
+  <td>Ao clicar no ícone no canto superior direito, deverá ser encaminhado para a tela de perfil do usuário. </td>
+  <td> Darem Adsom Rocha</td>
+ </tr>
+</table>
+
+
+<table>
+ <tr>
+  <th>Caso de teste</th>
+  <th>Requisitos associados</th>
+  <th>Objetivo do teste</th>
+  <th>Passos</th>
+  <th>Critérios de êxito</th>
+  <th>Responsável</th>
+ </tr>
+ <tr>
+  <td>CT-06: Verificar o funcionamento da tela de edição de perfil do usuário.</td>
+  <td>
+   <ul>
+    <li>RF-11:	Deverá ser possível alterar os dados
+do perfil do usuário através da tela de
+edição.</li>
+   </ul>
+  </td>
+  <td>Verificar se é possível alterar as informações do perfil do usuário na plataforma.</td>
+  <td>
+   <ol>
+    <li>Acessar o navegador.</li>
+    <li>Informar o endereço do site.</li>
+   <li>Visualizar a página de Login.</li>
+    <li>Digitar corretamente e-mail e senha do usuário.</li>
+    <li>Clicar em "Entrar"</li>
+    <li>Visualizar a página Home</li>
+    <li>Clicar no ícone de perfil no canto superior direito para acessar a tela de perfil do usuário.</li>
+    <li>Na tela de perfil do usuário, clique em "alterar informações".</li>
+   <li> Vizualizar a tela de edição de perfil.</li>
+   <li>Altere os dados desejados e clique em "Editar".</li>
+   <li>Vizualize a tela de perfil já com os dados alterados.</li>
+   </ol>
+   </td>
+  <td>Ao clicar na tecla "Editar" deve ser encaminhado para a tela de perfil do usuário com os dados já alterados. </td>
+  <td> Darem Adsom Rocha</td>
+ </tr>
+</table>
