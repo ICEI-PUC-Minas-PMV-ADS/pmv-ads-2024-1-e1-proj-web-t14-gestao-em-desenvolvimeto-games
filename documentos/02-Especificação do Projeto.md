@@ -76,6 +76,7 @@
 | RF- 09| Deverá ser possível ter acesso a recursos que facilitem a comunicação entre os membros da equipe, como comentários integrados aos próprios ativos. | Média|
 | RF- 10| Deverá ser possível mudar o status dos ativos para: A fazer, em andamento e finalizado. | Alta|
 | RF- 11| Deverá ser possível gerar um relatório demonstrando todos os status dos ativos digitais do projeto. | Média|
+| RF- 12| Deverá ser possível alterar os dados do perfil do usuário através da tela de edição. | Média|
 
 **Prioridade: Alta / Média / Baixa. 
 
