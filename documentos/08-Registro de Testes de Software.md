@@ -58,3 +58,25 @@ Os testes funcionais realizados na aplicação web são descritos a seguir.
   </li>
   <hr>
   
+
+  <li> CT-05: Verificar o funcionamento da tela de perfil do usuário.
+
+  Responsável: Darem Adsom Rocha.
+
+  <figure> 
+    <img src="https://i.ibb.co/tq4sTdf/20240605-155809-0000.png" width='600'
+  </figure>
+  </figure>
+    <img src="https://i.ibb.co/3zNcsQJ/20240605-155809-0000.jpg" width='600'  
+  </figure>  
+
+ <li> CT-06: Verificar o funcionamento da edição de perfil .
+
+  Responsável: Darem Adsom Rocha.
+
+   <figure> 
+     <img src="https://i.ibb.co/8cJKY6X/20240605-194104-0000.png" width='600'
+  </figure>
+  </figure>
+    <img src="https://i.ibb.co/smkxBTz/Screenshot-20240605-163650-Samsung-Internet.jpg" width='600'  
+  </figure>
