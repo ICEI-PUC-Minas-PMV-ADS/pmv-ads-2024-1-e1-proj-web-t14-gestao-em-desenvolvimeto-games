@@ -189,7 +189,7 @@ perfil.</li>
   <td>CT-06: Verificar o funcionamento da tela de edição de perfil do usuário.</td>
   <td>
    <ul>
-    <li>RF-11:	Deverá ser possível alterar os dados
+    <li>RF-12:	Deverá ser possível alterar os dados
 do perfil do usuário através da tela de
 edição.</li>
    </ul>
