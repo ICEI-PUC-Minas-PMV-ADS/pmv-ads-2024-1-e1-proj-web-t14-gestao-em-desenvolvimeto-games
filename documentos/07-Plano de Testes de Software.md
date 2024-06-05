@@ -72,3 +72,69 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
   <td>Roger Marques</td>
  </tr>
 </table>
+
+<table>
+ <tr>
+  <th>Caso de teste</th>
+  <th>Requisitos associados</th>
+  <th>Objetivo do teste</th>
+  <th>Passos</th>
+  <th>Critérios de êxito</th>
+  <th>Responsável</th>
+ </tr>
+ <tr>
+  <td>CT-03: Verificar o funcionamento da página para adicionar um ativo digital.</td>
+  <td>
+   <ul>
+    <li>RF-003:	Deverá ser possível adicionar novos ativos digitais.</li>
+   </ul>
+  </td>
+  <td>Verificar se é possível adicionar novos ativos digitais na plataforma.</td>
+  <td>
+   <ol>
+    <li>Acessar o navegador.</li>
+    <li>Informar o endereço do site.</li>
+    <li>Fazer login na plataforma.</li>
+    <li>Na página Home, localizar e clicar no botão "Adicionar Ativo".</li>
+    <li>Preencher os campos com os dados corretamente.</li>
+    <li>Clicar no botão "Adicionar"</li>
+    <li>Na página Home de volta, visualizar o novo ativo adicionado.</li>
+   </ol>
+   </td>
+  <td>Ao adicionar os dados referentes ao novo ativo e clicando no botão "Adicionar", o usuário deve ser redirecionado para a página Home</td>
+  <td>Henrique Chamone</td>
+ </tr>
+</table>
+
+<table>
+ <tr>
+  <th>Caso de teste</th>
+  <th>Requisitos associados</th>
+  <th>Objetivo do teste</th>
+  <th>Passos</th>
+  <th>Critérios de êxito</th>
+  <th>Responsável</th>
+ </tr>
+ <tr>
+  <td>CT-04: Verificar o funcionamento da página para adicionar uma categoria.</td>
+  <td>
+   <ul>
+    <li>RF-007:	Deverá ser possível adicionar novas categorias.</li>
+   </ul>
+  </td>
+  <td>Verificar se é possível adicionar novas categorias na plataforma.</td>
+  <td>
+   <ol>
+    <li>Acessar o navegador.</li>
+    <li>Informar o endereço do site.</li>
+    <li>Fazer login na plataforma.</li>
+    <li>Na página Home, localizar e clicar no botão "Adicionar Categorias".</li>
+    <li>Preencher o campo com o nome da nova categoria.</li>
+    <li>Clicar no botão "Adicionar"</li>
+    <li>Na página Home de volta, visualizar a nova categoria adicionada.</li>
+   </ol>
+   </td>
+  <td>Ao adicionar o nome da nova categoria e clicar no botão "Adicionar", o usuário deve ser redirecionado para a página Home</td>
+  <td>Henrique Chamone</td>
+ </tr>
+</table>
