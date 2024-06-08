@@ -83,8 +83,9 @@ Os testes funcionais realizados na aplicação web são descritos a seguir.
 
 <li> CT-06: Verifique o funcionamento da Tela Inicial.
    <br>
-   Responsável: Rafael Batista Mariano.
-   <figure> 
-https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-gestao-em-desenvolvimeto-games/assets/165967869/e77041a3-0256-4f1a-ad05-b7253ad56580
-   </figure>
+   Responsável: Rafael Batista Mariano.    
 </li>
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-gestao-em-desenvolvimeto-games/assets/165967869/cb64686c-a5b8-4862-8908-9334d8551420
+
+
