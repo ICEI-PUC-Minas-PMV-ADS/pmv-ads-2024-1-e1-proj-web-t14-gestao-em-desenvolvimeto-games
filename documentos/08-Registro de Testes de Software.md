@@ -85,7 +85,7 @@ Os testes funcionais realizados na aplicação web são descritos a seguir.
    <br>
    Responsável: Rafael Batista Mariano.
    <figure> 
-     <video width='600' src="[Vídeo/TESTE PATCH GESTOR DE ATIVOS DIGITAIS.mp4](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-gestao-em-desenvolvimeto-games/blob/main/documentos/V%C3%ADdeo/TESTE%20PATCH%2C%20GESTOR%20DE%20ATIVOS%20DIGITAIS.mp4)" controls> 
+     https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-gestao-em-desenvolvimeto-games/blob/main/documentos/V%C3%ADdeo/TESTE%20PATCH%2C%20GESTOR%20DE%20ATIVOS%20DIGITAIS.mp4
      </video>
    </figure>
 </li>
