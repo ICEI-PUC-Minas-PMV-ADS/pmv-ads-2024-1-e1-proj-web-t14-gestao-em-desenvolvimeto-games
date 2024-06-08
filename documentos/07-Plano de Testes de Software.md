@@ -214,3 +214,52 @@ edição.</li>
   <td> Darem Adsom Rocha</td>
  </tr>
 </table>
+
+<table>
+        <tr>
+         <th>Caso de teste</th>
+         <th>Requisitos associados</th>
+         <th>Objetivo do teste</th>
+         <th>Passos</th>
+         <th>Critérios de êxito</th>
+         <th>Responsável</th>
+        </tr>
+        <tr>
+         <td>CT-06: Verificar o funcionamento da Tela Inicial.</td>
+         <td>
+          <ul>
+            <li>RF-04	Será possível visualizar as miniaturas dos ativos digitais.</li>
+            <li>RF-05	Será possível acessar as miniaturas dos ativos digitais e visualizar detalhes sobre eles após clicar sobre os mesmos.</li>
+            <li>RF-06	Deverá ser possível filtrar os ativos digitais por categorias como texturas, sprites, animações etc.</li>
+            <li>RF-09	Será possível ter acesso a recursos que facilitem a comunicação entre os membros da equipe, como comentários integrados aos próprios ativos.</li>
+            <li>RF-10	Deverá ser possível mudar o status dos ativos para: A fazer, em andamento e finalizado.</li>
+            <li>RF-11	Será possível gerar um relatório demonstrando todos os status dos ativos digitais do projeto.</li>
+          </ul>
+         </td>
+         <td>Verificar se todos os componentes e funcionalidades da tela inicial estão corretos e funcionais</td>
+         <td>
+          <ol>
+           <li>Acessar o navegador.</li>
+           <li>Informar o endereço do site.</li>
+           <li>Visualizar a página de Login.</li>
+           <li>Digitar corretamente e-mail e senha do usuário.</li>
+           <li>Clicar em "Entrar"</li>
+           <li>Visualizar a página Home.</li>
+           <li>Visualizar as miniaturas dos ativos digitais.</li>
+           <li>Clicar sobre as miniaturas e visualizar os detalhes do ativo.</li>
+           <li>Clicar sobre a caixa de comentários, digitar algo e enviar.</li>
+           <li>vizualizar seu comentário logo abaixo </li>
+           <li>Clicar sobre as caixas de status do ativo para mudar para: A fazer, em andamento e finalizado.</li>
+           <li>Voltar à página Home usando a seta ou clicando sobre a logo Patch</li>
+           <li>Vizualizar as mudanças da minuatura do ativo</li>
+           <li>Clicar sobre as categorias uma por uma.</li>
+           <li>vizualizar os ativos filtrados por categoria</li>
+           <li>Clicar sobre a caixa de relatórios</li>
+           <li>Vizualizar as informações contidas em gráfico.</li>
+           <li>Sair da aba de relatórios usando o botão "X".</li>
+          </ol>
+          </td>
+         <td>Ao vizualizar a página e conseguir interagir com todos os botões e miniaturas contidas. </td>
+         <td> Rafael Batista Mariano</td>
+        </tr>
+       </table>
