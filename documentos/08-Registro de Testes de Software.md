@@ -80,3 +80,12 @@ Os testes funcionais realizados na aplicação web são descritos a seguir.
   </figure>
     <img src="https://i.ibb.co/smkxBTz/Screenshot-20240605-163650-Samsung-Internet.jpg" height='400'  
   </figure>
+
+   <li> CT-06: CT-06: Verifique o funcionamento da Tela Inicial .
+
+   Responsável: Rafael Batista Mariano.
+            
+  <figure> 
+        <video width='600' src="TESTE PATCH, GESTOR DE ATIVOS DIGITAIS.mp4" controls> 
+        </video>
+  </figure>
