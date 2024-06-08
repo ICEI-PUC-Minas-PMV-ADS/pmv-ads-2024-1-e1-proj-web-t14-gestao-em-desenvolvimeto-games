@@ -86,6 +86,6 @@ Os testes funcionais realizados na aplicação web são descritos a seguir.
    Responsável: Rafael Batista Mariano.
             
   <figure> 
-        <video width='600' src="TESTE PATCH, GESTOR DE ATIVOS DIGITAIS.mp4" controls> 
+        <video width='600' src=./Vídeo/"TESTE PATCH, GESTOR DE ATIVOS DIGITAIS.mp4" controls> 
         </video>
   </figure>
