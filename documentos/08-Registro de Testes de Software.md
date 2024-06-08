@@ -85,7 +85,6 @@ Os testes funcionais realizados na aplicação web são descritos a seguir.
    <br>
    Responsável: Rafael Batista Mariano.
    <figure> 
-    <video width='600' src="documentos/Vídeo/TESTE PATCH, GESTOR DE ATIVOS DIGITAIS.mp4" controls> 
-     </video>
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-gestao-em-desenvolvimeto-games/assets/165967869/e77041a3-0256-4f1a-ad05-b7253ad56580
    </figure>
 </li>
