@@ -225,7 +225,7 @@ edição.</li>
          <th>Responsável</th>
         </tr>
         <tr>
-         <td>CT-06: Verificar o funcionamento da Tela Inicial.</td>
+         <td>CT-07: Verificar o funcionamento da Tela Inicial.</td>
          <td>
           <ul>
             <li>RF-04	Será possível visualizar as miniaturas dos ativos digitais.</li>
