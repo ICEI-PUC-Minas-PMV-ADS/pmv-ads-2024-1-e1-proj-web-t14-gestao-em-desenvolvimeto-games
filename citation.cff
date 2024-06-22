@@ -1,0 +1,21 @@
+message: Please cite this software using these metadata.
+title: Patch - Gestor de Desesenvolvimento de Jogos.
+authors:
+  - family-names: Adson Rocha
+    given-names: Darem
+  - family-names: Chamone Oselieri
+    given-names: Henrique 
+  - family-names: Batista Mariano
+    given-names: Rafael
+  - family-names: da Silva Marques
+    given-names: Roger
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Nepomuceno Curto
+    given-names: Hayala
+keywords:
+  - Desenvolvimento de jogos
+  - Gestão
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-gestao-em-desenvolvimeto-games
+version: 1.0.0
+date-released: 2024-06-22
